@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace XamarinTutorials.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class BindingContextCB : ContentPage
+    {
+        public BindingContextCB()
+        {
+            InitializeComponent();
+            LblEdwin.BindingContext = Slider;
+            LblEdwin.SetBinding(Label.RotationProperty, "Value");
+        }
+    }
+}
